@@ -6,7 +6,7 @@ rdd2.collect()
 
 2: flatMap
 rdd1 = sc.parallelize([1,2,3,4])
-rdd2 = rdd1.map(lambda x: [x,x**2])
+rdd2 = rdd1.flatMap(lambda x: [x,x**2])
 rdd2.collect()
 
 3: filter
