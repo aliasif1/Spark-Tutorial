@@ -1,0 +1,7 @@
+rdd1 = sc.parallelize([1,2,3,4,5,6,1,2,3,3,4,5,6,1,2,4,3,3])
+rdd1,max()
+rdd1.min()
+rdd1.sum()
+rdd1.mean()
+rdd1.stdev()
+rdd1.variance()
