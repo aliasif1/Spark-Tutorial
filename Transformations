@@ -21,12 +21,12 @@ rdd2.collect()
 
 #SET 2
 1: reduceByKey
-rdd1 = sc.parallelize([(‘a’,1), (‘b’,1), (‘a’,1),(‘a’,1)])
+rdd1 = sc.parallelize([('a',1), ('b',1), ('a',1),('a',1)])
 rdd2 = rdd1.reduceByKey(lambda x,y: x+y))
 rdd2.collect()
 
 2: groupByKey
-rdd1 = sc.parallelize([(‘a’,1), (‘b’,1), (‘a’,2),(’b’,3)])
+rdd1 = sc.parallelize([('a',1), ('b',1), ('a',2),('b',3)])
 rdd2 = rdd1. groupByKey()
 rdd2.collect()
 
@@ -49,14 +49,14 @@ rdd3 = rdd1.intersection(rdd2)
 rdd3.collect()
 
 3: join
-rdd1 = sc.parallelize([(‘a’,1),(‘b’,1)])
-rdd2 = sc.parallelize([(‘a’,2),(‘c’,1)])
+rdd1 = sc.parallelize([('a',1),('b',1)])
+rdd2 = sc.parallelize([('a',2),('c',1)])
 rdd3 = rdd1.join(rdd2)
 rdd3.collect()
 
 4: fullOuterJoin
-rdd1 = sc.parallelize([(‘a’,1),(‘b’,1)])
-rdd2 = sc.parallelize([(‘a’,2),(‘c’,1)])
+rdd1 = sc.parallelize([('a',1),('b',1)])
+rdd2 = sc.parallelize([('a',2),('c',1)])
 rdd3 = rdd1.fullOuterJoin(rdd2)
 rdd3.collect()
 
