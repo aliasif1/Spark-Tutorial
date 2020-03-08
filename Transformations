@@ -22,7 +22,7 @@ rdd2.collect()
 #SET 2
 1: reduceByKey
 rdd1 = sc.parallelize([('a',1), ('b',1), ('a',1),('a',1)])
-rdd2 = rdd1.reduceByKey(lambda x,y: x+y))
+rdd2 = rdd1.reduceByKey(lambda x,y: x+y)
 rdd2.collect()
 
 2: groupByKey
